@@ -4,11 +4,11 @@ import { getTaskController } from '../modules/tasks/useCases/getTask';
 
 const taskRoutes = Router();
 
-taskRoutes.post('/', (req, res) => {
+taskRoutes
+.post('/', (req, res) => {
     return createTaskController.handle(req, res);
-});
-
-taskRoutes.get('/:id', (req, res) => { 
+})
+.get('/:id', (req, res) => { 
     return getTaskController.handle(req, res);
 });
 
