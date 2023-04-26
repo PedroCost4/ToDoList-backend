@@ -1,7 +1,7 @@
 import { Task } from '../model/Task';
 
 interface ITaskDTO {
-
+    id: string;
     title: string;
     completed: boolean;
 

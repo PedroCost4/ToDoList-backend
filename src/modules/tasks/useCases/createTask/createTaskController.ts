@@ -6,9 +6,9 @@ class CreateTaskController {
     constructor(private createTaskUseCase: CreateTaskUseCase) { }
 
     handle (request: Request, response: Response): Response {
-        const { title, completed } = request.body;
+        const { id, title, completed } = request.body;
 
-        const task = this.createTaskUseCase.execute({ title, completed });
+        const task = this.createTaskUseCase.execute({ id, title, completed });
 
         return response.status(201).json(task);
     }
